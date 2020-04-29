@@ -1,5 +1,8 @@
 # Exploratory Data Analysis Week1 Assignment
 
+## Repositary
+There should be four PNG files and four R code files, a total of eight files in the top-level folder of the repo
+
 ## Dataset
 the “Individual household electric power consumption Data Set” [20Mb] which made available on the course web site:
 https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip                 
