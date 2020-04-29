@@ -1,13 +1,10 @@
-analysis_plot(){
+analysis_plot<- function(){
 
 ##Dates that are in the form %Y-%m-%d or Y/%m/%d will import correctly
 
 #setAs("character","myDate", function(from) as.Date(from, format="%d/%m/%Y") )
 #setAs("character","myTime", function(from) as.POSIXlt(from, format="%H:%M:%S") )
 #data <- read.table("household_power_consumption.txt", colClasses=c('myDate',''), header=FALSE)
-
-
-
 
 ##
 ## https://stackoverflow.com/questions/24090768/importing-only-rows-matching-specific-values
