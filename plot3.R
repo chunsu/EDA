@@ -8,4 +8,4 @@ plot3<- function(){
 	legend("topright", col = c("black","red","blue"), lty = c(1, 1, 1),legend = c('Sub_metering_1','Sub_metering_2','Sub_metering_3'))
 	dev.off() 
 
-｝
+}
