@@ -4,4 +4,4 @@ plot2<- function(){
 	with(subdata, plot(date_time, Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)"))
 	dev.off() 
 
-｝
+}
