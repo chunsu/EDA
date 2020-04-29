@@ -1,11 +1,14 @@
 plot1<- function(){
 
-## reading the data, only from the dates 2007-02-01 and 2007-02-02.
+## Before reading the data into R, examine "hosuehold_power_consumption.txt" file in textEdit
+## found dates of 2007-02-01 and 2007-02-02 are '1/2/2007' and '2/2/2007'
+
 ## I referenced the answer from the below webpage
 ## https://stackoverflow.com/questions/24090768/importing-only-rows-matching-specific-values
-
+## Reading the data, only from the dates '1/2/2007' and '2/2/2007', which in dataframe Lines start from 1 and end at 8
+## Hence substr(Lines,1,8)
 Lines <- readLines("household_power_consumption.txt")
-subL <- grep("^[12]/2/2007", substr(Lines, 1,8) )# a numeric vector
+subL <- grep("^[12]/2/2007", substr(Lines, 1, 8) ) 
 subdata <- read.table(text=Lines[subL], header = FALSE, sep= ";")
 
 
