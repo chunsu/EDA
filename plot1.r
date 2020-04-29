@@ -13,8 +13,8 @@ analysis_plot(){
 ## https://stackoverflow.com/questions/24090768/importing-only-rows-matching-specific-values
 
 Lines <- readLines("household_power_consumption.txt")
-subL <- grep("^[1234567]/5/2007", substr(Lines, 1,8) )# a numeric vector
-subdata <- read.table(text=Lines[subL], header = TRUE))
+subL <- grep("^[12]/2/2007", substr(Lines, 1,8) )# a numeric vector
+subdata <- read.table(text=Lines[subL], header = FALSE, sep= ";")
 
 
 ##
@@ -24,5 +24,13 @@ library(lubridate)
 subdata$date_time <- paste(subdata$V1, subdata$V2)
 subdata$date_time <- dmy_hms(subdata$date_time)
 subdata[1:2] <- list(NULL)
+
+names(subdata)[1:7] <- c('Global_active_power','Global_reactive_power','Voltage','Global_intensity','Sub_metering_1','Sub_metering_2','Sub_metering_3')
+## task 1
+## Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
+## Your code file should include code for reading the data so that the plot can be fully reproduced. You must also include the code that creates the PNG file
+
+hist(subdata$Global_active_power, col= "red", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power")
+
 
 }
