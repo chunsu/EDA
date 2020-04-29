@@ -1,10 +1,10 @@
 # Exploratory Data Analysis Week1 Assignment
 
 ## Repositary
-There should be four PNG files and four R code files, a total of eight files in the top-level folder of the repo
+There are four PNG files and four R code files, a total of eight files in the top-level folder of the repo
 
 ## Dataset
-the “Individual household electric power consumption Data Set” [20Mb] which made available on the course web site:
+“Individual household electric power consumption Data Set” [20Mb]
 https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip                 
   
 Description: Measurements of electric power consumption in one household with a one-minute sampling rate over a period of almost 4 years. Different electrical quantities and some sub-metering values are available.   
@@ -21,11 +21,11 @@ Description: Measurements of electric power consumption in one household with a 
 - 'Sub_metering_2': energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light.
 - 'Sub_metering_3': energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.
 
-## Loading the data
+## Notes:
 
-When loading the dataset into R, please consider the following:
-- The dataset has 2,075,259 rows and 9 columns. First calculate a rough estimate of how much memory the dataset will require in memory before reading into R. 
-- Only be using data from the dates 2007-02-01 and 2007-02-02. 
-- You may find it useful to convert the Date and Time variables to Date/Time classes in R using the strptime() and as.Date() functions.
-- Note that in this dataset missing values are coded as ?\.
+- When loading the dataset into R, I use 'readLines' function to increase the speed. ref[1]
+- package 'lubridate' is required, function 'dmy_hms' is used to create a date-time class. ref[2]
 
+## Reference
+1.https://stackoverflow.com/questions/24090768/importing-only-rows-matching-specific-values
+2.https://stackoverflow.com/questions/35794140/reading-time-from-csv-file-in-r
