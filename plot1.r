@@ -30,7 +30,8 @@ names(subdata)[1:7] <- c('Global_active_power','Global_reactive_power','Voltage'
 ## Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels.
 ## Your code file should include code for reading the data so that the plot can be fully reproduced. You must also include the code that creates the PNG file
 
+png("Plot 1.png")
 hist(subdata$Global_active_power, col= "red", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power")
-
+dev.off() 
 
 }
