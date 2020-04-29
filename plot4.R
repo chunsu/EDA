@@ -1,7 +1,7 @@
-plot4<- function(){
-
+plot4 <- function(){
+	## 
 	png("Plot 4.png")
-	par(mfrow(2,2))
+	par(mfcol= c(2,2))
 	## topleft
 	with(subdata, plot(date_time, Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)"))
 	## bottomleft
@@ -14,6 +14,6 @@ plot4<- function(){
 	with(subdata, plot(date_time, Voltage, type = "l", xlab = "datetime"))
 	## bottomleft
 	with(subdata, plot(date_time, Global_reactive_power, type = "l", xlab = "datetime"))
-	dev.off() 
-	
-｝
+	dev.off()
+
+}
