@@ -27,5 +27,5 @@ Description: Measurements of electric power consumption in one household with a 
 - package 'lubridate' is required, function 'dmy_hms' is used to create a date-time class. ref[2]
 
 ## Reference
-1.https://stackoverflow.com/questions/24090768/importing-only-rows-matching-specific-values
-2.https://stackoverflow.com/questions/35794140/reading-time-from-csv-file-in-r
+- 1.https://stackoverflow.com/questions/24090768/importing-only-rows-matching-specific-values
+- 2.https://stackoverflow.com/questions/35794140/reading-time-from-csv-file-in-r
